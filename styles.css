@@ -1,0 +1,197 @@
+/* ALL THE COLOR VALUES USED */
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 5.15rem;
+    margin-bottom: 1rem;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--Very-light-gray);
+    font-weight: 700;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    padding: 1.4rem 0;
+}
+
+.description {
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--Transparent-white);
+    font-weight: 400;
+    font-size: 0.99rem;
+    padding-top: 0rem;
+    margin-bottom: 2.5rem;
+}
+
+
+#container {
+    max-width: 55rem;
+    min-height: 65vh;
+    align-self: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin: 3rem;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Bright-orange);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    justify-content: space-evenly;
+    padding: 3rem;
+    justify-self: end;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Dark-cyan);
+    justify-content: space-evenly;
+    padding: 3rem;
+    justify-self: end;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Very-dark-cyan);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    justify-content: space-evenly;
+    padding: 3rem;
+    justify-self: end;
+}
+
+/* CSS PROPERTY FOR BUTTONS */
+main a {
+    background-color: var(--Very-light-gray);
+    border-radius: 2rem;
+    border: none;
+    font-weight: 500;
+    transition: 0.01s;
+    padding: 0.8em;
+    margin-top: 2rem;
+    width: 8rem;
+}
+
+.sedan:hover {
+    border: 0.2em solid var(--Very-light-gray);
+    background-color: var(--Bright-orange);
+    color: var(--Very-light-gray);
+}
+
+.sedan {
+    color: var(--Bright-orange);
+}
+
+.suv:hover {
+    border: 0.2em solid var(--Very-light-gray);
+    background-color: var(--Dark-cyan);
+    color: var(--Very-light-gray);
+}
+
+.suv {
+    color: var(--Dark-cyan);
+}
+
+.luxury:hover {
+    border: 0.2em solid var(--Very-light-gray);
+    background-color: var(--Dark-cyan);
+    color: var(--Very-light-gray);
+}
+
+.luxury {
+    color: var(--Very-dark-cyan);
+}
+
+/* FOOTER */
+
+
+footer {
+    text-align: center;
+    position: absolute;
+    bottom: 10%;
+    font-size: 0.9em;
+}
+
+.footer a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* MEDIA QUERY FOR MOBILE */
+@media (max-width: 844px) and (max-width:465px) {
+    #container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .left {
+        border-top-right-radius: 1rem;
+        border-bottom-left-radius: 0;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        gap: 1rem;
+    }
+
+    .middle {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        gap: 1rem;
+    }
+
+    .right {
+        border-bottom-right-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        border-top-right-radius: 0;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        margin: 0.5rem 0 0.5rem 0;
+    }
+
+    footer {
+        position: absolute;
+        top: 325%;
+    }
+
+}
+
+@media(min-width:768px) {
+    footer {
+        position: absolute;
+        top: 120%;
+    }
+}
