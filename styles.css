@@ -23,12 +23,14 @@ img {
 
 body {
     min-height: 100vh;
+    font-size: 1rem;
+    line-height: 1.4;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
-    line-height: 1.4;
+    flex-direction: column;
 }
+
 
 h2 {
     font-family: 'Big Shoulders Display', cursive;
@@ -36,58 +38,50 @@ h2 {
     font-weight: 700;
     font-size: 2.3rem;
     text-transform: uppercase;
-    padding: 1.4rem 0;
+    margin: 1.5rem 0;
 }
 
 .description {
     font-family: 'Lexend Deca', sans-serif;
     color: var(--Transparent-white);
     font-weight: 400;
-    font-size: 0.99rem;
+    font-size: rem;
     padding-top: 0rem;
     margin-bottom: 2.5rem;
 }
 
 
-#container {
+.container {
     max-width: 55rem;
     min-height: 65vh;
     align-self: center;
     justify-content: center;
     display: flex;
     flex-direction: row;
-    margin: 3rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
-.left {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--Bright-orange);
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    justify-content: space-evenly;
-    padding: 3rem;
-    justify-self: end;
-}
-
-.middle {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--Dark-cyan);
-    justify-content: space-evenly;
-    padding: 3rem;
-    justify-self: end;
-}
-
+.left,
+.middle,
 .right {
     display: flex;
     flex-direction: column;
-    background-color: var(--Very-dark-cyan);
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    justify-content: space-evenly;
     padding: 3rem;
-    justify-self: end;
+    justify-content: space-evenly;
+}
+
+.left {
+    background-color: var(--Bright-orange);
+}
+
+.middle {
+    background-color: var(--Dark-cyan);
+}
+
+.right {
+    background-color: var(--Very-dark-cyan);
 }
 
 /* CSS PROPERTY FOR BUTTONS */
@@ -136,10 +130,7 @@ main a {
 
 
 footer {
-    text-align: center;
-    position: absolute;
-    bottom: 10%;
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 .footer a {
@@ -147,51 +138,9 @@ footer {
 }
 
 /* MEDIA QUERY FOR MOBILE */
-@media (max-width: 844px) and (max-width:465px) {
-    #container {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 1rem;
-    }
 
-    .left {
-        border-top-right-radius: 1rem;
-        border-bottom-left-radius: 0;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        gap: 1rem;
-    }
-
-    .middle {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        gap: 1rem;
-    }
-
-    .right {
-        border-bottom-right-radius: 1rem;
-        border-bottom-left-radius: 1rem;
-        border-top-right-radius: 0;
-        gap: 1rem;
-        margin-bottom: 2rem;
-    }
-
-    h2 {
-        margin: 0.5rem 0 0.5rem 0;
-    }
-
-    footer {
-        position: absolute;
-        top: 325%;
-    }
-
-}
-
-@media(min-width:768px) {
-    footer {
-        position: absolute;
-        top: 120%;
+@media(max-width:376px) {
+    .container {
+        display: block;
     }
 }
